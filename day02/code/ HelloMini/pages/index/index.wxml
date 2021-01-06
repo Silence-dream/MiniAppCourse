@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- text是小程序提供的基础组件 -->
+  <!-- 除了文本节点以外的其他节点都无法长按选中 -->
+
+  <!-- decode 是否解码 -->
+  <text>{{aaa}}</text>
+  <text decode="true">&nbsp; &lt; &gt; &amp; &apos; &ensp; &emsp;</text>
+
+  <!-- space 显示连续空格 -->
+  <text data-red="bac" space="ensp">啊士大 夫的撒 士大 夫撒1 </text>
+  <text data-red="acc" space="emsp">啊士大 夫的撒 士大 夫撒2 </text>
+  <text space="nbsp">啊士大 夫的撒 士大 夫撒3 </text>
+
+  <!-- user-select控制文字是否可以被选中的 没写默认就是不能选中 写了就是可以被选中 -->
+  <text user-select="false">阿斯蒂芬撒地方士大夫</text>
+
+
+
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <!-- view视图容器组件 相当于html中的div -->
+  <view class="box" hover-class="box-hover" hover-start-time="2000" hover-stay-time="2000">
+    view组件
+  </view>
+
+
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <button size="default" type="primary">按钮</button>
+  <!-- <button size="mini" type="default" plain="true">按钮</button>
+  <button size="mini" type="warn" loading="true">按钮</button> -->
+
+
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <input value="" type="number" password="true" placeholder="请输入您的用户名" placeholder-class="input-placeholder" />
+
+
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <image src="/images/01.png" mode="aspectFit"></image>
+  <image src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png"></image>
+
+  <!-- 导航 -->
+  <view class="btn-area">
+    <navigator url="/pages/about/about" hover-class="navigator-hover" open-type="reLaunch">跳转到关于页面</navigator>
+  </view>
+
+</view>

@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 数据绑定 -->
+  <text>{{name+id}}</text>
+  <text data-id="{{id}}">asfsadfsdf</text>
+
+
+  <!-- 小程序中的事件 -->
+  <!-- 
+    1.移动端事件(js)--touchstart(触摸开始) touchend(触摸结束) touchmove(触摸移动)
+    以下称为手势
+    2.单击事件: click tap(单击)
+
+    3.双击: dbtap
+
+   -->
+  <button bindtap="handleTap">点我看看</button>
+
+  <input type="text" bindinput="handleInput" />
+  <text>{{str}}</text>
+
+  <!-- 小程序中的事件传参 -->
+  <button type="primary" bindtap="handleArg" data-index="111" data-fa="cccc">点击查看参数</button>
+
+
+  <!-- 条件渲染 -->
+  <!-- <text wx:if="{{age < 18}}">未成年人不允许进入网吧</text>
+   <text wx:elif="{{age >= 18 && age <=100}}">欢迎您进入网吧</text>
+   <text wx:else>您已成仙</text> -->
+
+
+  <block wx:if='{{ age == 18 }}'>
+    <view>JavaScript</view>
+    <view>HTML</view>
+    <view>CSS</view>
+  </block>
+
+
+  <view hidden='{{ id > 10 }}'>前端三板斧</view>
+
+
+
+  <!-- 循环列表渲染 -->
+  <view wx:for="{{list}}" wx:for-item="ele" wx:for-index="in" wx:key="id">{{in}}-{{ele.name}}</view>
+
+
+  <!-- 下拉刷新 -->
+  <button bindtap="handleRefresh">点击我下拉刷新</button>
+
+
+  <!-- 页面内转发 -->
+  <button type="primary"  open-type="share">分享</button>
+
+  <!-- wxs(了解) -->
+  <wxs module="index">
+
+  </wxs>
+
+  <wxs src="../../utils/main.wxs" module="main"></wxs>
+</view>

@@ -1,0 +1,16 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  /* 让一个普通的view元素变成伸缩容器 */
+  display: flex;
+  /* 控制主轴的方向 */
+  flex-direction: column;
+  /* 控制伸缩项目在主轴方向上的对其方式 flex-start flex-end space-around space-between center */
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+
+
+text {
+  border: 1px solid red;
+}

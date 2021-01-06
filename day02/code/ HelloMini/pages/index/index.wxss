@@ -1,0 +1,48 @@
+/**index.wxss**/
+
+@import "/css/common.wxss";
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+.box-hover {
+  background-color: blue;
+}
+
+input {
+  border: 1px solid #ccc;
+}
+
+.input-placeholder {
+  color: red;
+}
+
+image {
+  width: 200px;
+  height: 100px;
+}
+
+/* 属性值以xxxx开头的属性选择器 */
+/* text[data-red^="a"] {
+  color: red;
+} */
+
+/* 属性值以xxxx结尾的属性选择器 */
+/* text[data-red$="c"] {
+  color: greenyellow;
+} */
+
+/* 属性值中含有xxxx在任意位置的属性选择器 */
+/* text[data-red*="a"] {
+  color: greenyellow;
+} */
+
+text {
+  border: 1px dashed blue;
+}
+text:nth-child(3) {
+  background-color: hotpink;
+}

@@ -1,0 +1,12 @@
+var name = "站感受";
+
+console.log(name)
+     function infos(a,b){
+      console.log(a+b);
+     }
+
+
+module.exports = {
+  name:name,
+  infos: infos
+}

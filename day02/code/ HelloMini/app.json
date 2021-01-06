@@ -1,0 +1,56 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/about/about"
+  ],
+  "window":{
+    "navigationBarTitleText": "小程序",
+    "navigationBarBackgroundColor": "#00ff00",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":true,
+    "backgroundColor":"#000",
+    "backgroundTextStyle":"light",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#181818",
+    "borderStyle": "black",
+    "selectedColor": "#00D0AC",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/btn_home_nor.png",
+        "selectedIconPath": "/images/btn_home_sel.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/btn_home_nor.png",
+        "selectedIconPath": "/images/btn_home_sel.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/btn_home_nor.png",
+        "selectedIconPath": "/images/btn_home_sel.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/btn_home_nor.png",
+        "selectedIconPath": "/images/btn_home_sel.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "/images/btn_mine_nor.png",
+        "selectedIconPath": "/images/btn_mine_sel.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
