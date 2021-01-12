@@ -1,0 +1,14 @@
+<!-- index.wxml -->
+<view class="container">
+  <!-- 1.搜索 -->
+  <view class="hm-search">
+    <input type="text" placeholder="搜索"/>
+  </view>
+  <!-- 2.轮播图 -->
+  <view class="" >
+    
+  </view>
+  <!-- 3.分类 -->
+  <!-- 4.楼层 -->
+
+</view>

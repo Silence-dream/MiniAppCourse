@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "compo-n": "/components/compo/compo"
+  }
+}

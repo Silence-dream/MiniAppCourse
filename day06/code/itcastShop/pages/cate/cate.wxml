@@ -1,0 +1,21 @@
+<!-- 分类 -->
+<view class="container">
+  <!-- 1.搜索 -->
+  <Search class="cate-search"></Search>
+  <!-- 2.分类列表 -->
+  <view class="cate-list">
+    <scroll-view class="cate-list-left"  scroll-y="true">
+      <view class="cate-list-left-item" wx:for="{{cateList}}" wx:key="cat_id" >
+        {{item.cat_name}}
+      </view>
+    </scroll-view>
+
+    <scroll-view class="cate-list-right"  scroll-y="true">
+      <view class="cate-list-right-item" wx:for="{{cateList}}" wx:key="cat_id" >
+        {{item.cat_name}}
+      </view>
+    </scroll-view>
+  </view>
+
+ 
+</view>

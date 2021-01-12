@@ -1,0 +1,13 @@
+/**index.wxss**/
+.hm-search {
+  background-color: var(--themeColor);
+  padding: 12rpx 30rpx;
+}
+
+.hm-search input {
+  background-color: #fff;
+  height: 60rpx;
+  border-radius: 30rpx;
+  padding: 0 30rpx;
+  font-size: 28rpx;
+}

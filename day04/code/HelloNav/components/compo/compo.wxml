@@ -1,0 +1,21 @@
+<!--components/compo/compo.wxml-->
+<view>
+  <text>compo组件</text>
+  <text>{{name}}</text>
+
+  <button bindtap="handleData">点我查看数据</button>
+  <button bindtap="handleaaa">在士大夫撒旦发生大</button>
+  <!-- properties -->
+  <button bindtap="handleaaa">点我修改properties的值</button>
+  <view>{{propAge.family}}</view>
+  <view>{{propNumber}}</view>
+
+
+  <!-- 插槽 -->
+  <!-- <slot></slot> -->
+
+  <!-- 多插槽 -->
+  <slot name="zs"></slot>
+  <view>-----------------------------------------------</view>
+  <slot name="ls"></slot>
+</view>

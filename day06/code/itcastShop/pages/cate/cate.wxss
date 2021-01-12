@@ -1,0 +1,33 @@
+/* pages/cate/cate.wxss */
+.cate-search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.cate-list {
+  height: 100%;
+  display: flex;
+}
+
+.cate-list-left {
+  /* vh 和 vw 单位 */
+  /* vh: viewport 视口高度 1vh = 视口高度的100%  */
+  /*  */
+  height: calc(100vh - 90rpx);
+  width: 200rpx;
+  background-color: #f7f7f7;
+}
+
+.cate-list-left-item {
+  /* background-color:  */
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+
+.cate-list-right{
+  flex: 1;
+}

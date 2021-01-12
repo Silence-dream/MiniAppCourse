@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container">
+ <h1>首页</h1>
+
+ <!-- 导航到非tabBar页面 -->
+ <navigator url="/pages/user/user?name=zs&age=18">跳转到用户个人中心页面</navigator>
+
+ <button type="primary" size="mini"  bindtap="handleViewUser">个人中心</button>
+
+ <!-- 导航到tabBar页面 -->
+ <navigator url="/pages/logs/logs" open-type="switchTab">跳转到日志页面</navigator>
+
+ <button type="primary" size="mini"  bindtap="handleViewLogs">日志</button>
+
+
+ <!-- 网络请求 -->
+ <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio>
+
+ <button type="primary" bindtap="handleReadMusic">网易云音乐</button>
+
+
+ <!-- 组件的使用 -->
+ <button bindtap="handleCompo">获取子组件的实例</button>
+ <compo-n class="compo" prop-age="{{obj}}" prop-number="4"> 
+ 
+  <text slot="ls">我是ls插槽的内容</text>
+  <text slot="zs">我是zs插槽的内容</text>
+ 
+ </compo-n>
+</view>

@@ -1,0 +1,7 @@
+<!--pages/user/user.wxml-->
+<view>
+  <h1>用户个人中心</h1>
+  <navigator open-type="navigateBack" delta="1">返回</navigator>
+
+  <button type="primary" size="mini"  bindtap="handleBack">返回</button>
+</view>
