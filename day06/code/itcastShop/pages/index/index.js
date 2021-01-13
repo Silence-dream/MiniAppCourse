@@ -5,62 +5,103 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    swiperData: [],
+    catitemsData: [],
+    floorData: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.handleSwiperRead();
+    this.handleCatitemsRead();
+    this.handleFloorRead();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
   },
 
   /**
-   * 生命周期函数--监听页面显示
+   * @name 获取首页轮播图数据
+   * 
    */
-  onShow: function () {
-    
+  handleSwiperRead() {
+    const _this = this;
+    wx.request({
+      url: `https://www.uinav.com/api/public/v1/home/swiperdata`,
+      method: 'GET',
+      success: function (res) {
+        let {
+          message,
+          meta
+        } = res.data;
+        if (meta.status == 200) {
+          _this.setData({
+            swiperData: message
+          })
+        }
+      },
+      fail: function (err) {
+        console.log("--------- index.js 48 -------------")
+        console.log(err)
+      }
+    })
   },
 
   /**
-   * 生命周期函数--监听页面隐藏
+   * @name 获取首页分类选项数据
+   * 
    */
-  onHide: function () {
-    
+  handleCatitemsRead() {
+    const _this = this;
+    wx.request({
+      url: `https://www.uinav.com/api/public/v1/home/catitems`,
+      method: 'GET',
+      success: function (res) {
+        let {
+          message,
+          meta
+        } = res.data;
+        if (meta.status == 200) {
+          _this.setData({
+            catitemsData: message
+          })
+        }
+      },
+      fail: function (err) {
+        console.log(err)
+      }
+    })
   },
 
   /**
-   * 生命周期函数--监听页面卸载
+   * @name 获取首页楼层
+   * 
    */
-  onUnload: function () {
-    
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
-  }
+    handleFloorRead(){
+      const _this = this;
+      wx.request({
+        url: `https://www.uinav.com/api/public/v1/home/floordata`,
+        method: 'GET',
+        success: function (res) {
+          console.log(res);
+          let {
+            message,
+            meta
+          } = res.data;
+          if (meta.status == 200) {
+            _this.setData({
+              floorData: message
+            })
+          }
+        },
+        fail: function (err) {
+          console.log(err)
+        }
+      })
+    }
 })

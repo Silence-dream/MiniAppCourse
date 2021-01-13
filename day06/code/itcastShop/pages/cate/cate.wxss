@@ -1,33 +1,60 @@
 /* pages/cate/cate.wxss */
 .cate-search {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
+  padding: 14rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #c00000;
 }
 
-.cate-list {
-  height: 100%;
+.cate-search input {
+  padding: 0 25rpx;
+  height: 50rpx;
+  background-color: #fff;
+  border-radius: 25rpx;
+  font-size: 28rpx;
+}
+
+.cates .cates-container {
+  /* less中使用calc的时候要注意 */
+  height: calc( 100vh - 90rpx );
   display: flex;
 }
-
-.cate-list-left {
-  /* vh 和 vw 单位 */
-  /* vh: viewport 视口高度 1vh = 视口高度的100%  */
-  /*  */
-  height: calc(100vh - 90rpx);
-  width: 200rpx;
-  background-color: #f7f7f7;
+.cates  .left-menu {
+  /* 子项 高度 100% flex */
+  flex: 2;
 }
-
-.cate-list-left-item {
-  /* background-color:  */
+.cates .left-menu .menu-item {
   height: 80rpx;
-  line-height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+}
+.cates  .left-menu .active {
+  color: var(--themeColor);
+  border-left: 5rpx solid currentColor;
+}
+.cates .right-content {
+  /* 子项 高度 100% flex */
+  flex: 5;
+}
+.cates .right-content .goods-title {
+  height: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cates  .right-content .goods-group .goods-title .delimiter {
+  color: #ccc;
+  padding: 0 10rpx;
+}
+.cates .cates-container .right-content .goods-group .goods-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cates .cates-container .right-content .goods-group .goods-list navigator {
+  width: 33.33%;
   text-align: center;
 }
-
-
-.cate-list-right{
-  flex: 1;
+.cates .cates-container .right-content .goods-group .goods-list navigator image {
+  width: 50%;
 }

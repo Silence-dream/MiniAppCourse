@@ -1,21 +1,33 @@
-<!-- 分类 -->
-<view class="container">
-  <!-- 1.搜索 -->
-  <Search class="cate-search"></Search>
-  <!-- 2.分类列表 -->
-  <view class="cate-list">
-    <scroll-view class="cate-list-left"  scroll-y="true">
-      <view class="cate-list-left-item" wx:for="{{cateList}}" wx:key="cat_id" >
-        {{item.cat_name}}
+<view class="container cate">
+  <!-- 搜索 -->
+  <view class="cate-search">
+    <input type="text" placeholder="搜索" />
+  </view>
+  <!-- 分类 -->
+  <view class="cates-container">
+    <!-- 左侧菜单 -->
+    <scroll-view scroll-y class="left-menu">
+      <view class="menu-item {{index===currentIndex?'active':''}}" wx:for="{{leftMenuList}}" wx:key="*this"
+        bindtap="handleItemTap" data-index="{{index}}">
+        {{item}}
       </view>
     </scroll-view>
-
-    <scroll-view class="cate-list-right"  scroll-y="true">
-      <view class="cate-list-right-item" wx:for="{{cateList}}" wx:key="cat_id" >
-        {{item.cat_name}}
+    <!-- 右侧商品内容 -->
+    <scroll-view scroll-top="{{scrollTop}}" scroll-y class="right-content">
+      <view class="goods-group" wx:for="{{rightContent}}" wx:for-index="index1" wx:for-item="item1">
+        <view class="goods-title">
+          <text class="delimiter">/</text>
+          <text class="title">{{item1.cat-name}}</text>
+          <text class="delimiter">/</text>
+        </view>
+        <view class="goods-list">
+          <navigator wx:for="{{item1.children}}" wx:for-index="index2" wx:for-item="item2" wx:key="cat-id"
+            url="/pages/goods-list/index?cid={{item2.cat-id}}">
+            <image mode="widthFix" src="{{item2.cat-icon}}"></image>
+            <view class="goods-name">{{item2.cat-name}}</view>
+          </navigator>
+        </view>
       </view>
     </scroll-view>
   </view>
-
- 
 </view>
